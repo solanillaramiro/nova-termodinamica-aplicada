@@ -177,6 +177,81 @@
         footer { background: #001126; color: #94a3b8; text-align: center; padding: 40px 20px; font-size: 0.95em; border-top: 1px solid rgba(255,255,255,0.1); position: relative; z-index: 10; }
         .info-contacto { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 20px; color: var(--blanco); }
         .info-contacto span { display: flex; align-items: center; gap: 8px; }
+
+            /* =======================================================
+           DISEÑO RESPONSIVO: OPTIMIZACIÓN PARA CELULARES
+           ======================================================= */
+        @media (max-width: 768px) {
+            /* 1. Reordena el encabezado en formato vertical y centrado */
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+                gap: 15px;
+            }
+
+            .logo-contenedor {
+                flex-direction: column; /* Pone el texto abajo del logo circular */
+                gap: 10px;
+            }
+
+            .logo-img {
+                height: 110px; /* Le da un tamaño más protagónico al logo en celulares */
+                margin: 0 auto;
+            }
+
+            .logo-texto {
+                font-size: 1.5em;
+            }
+
+            /* 2. Centra y espacia los botones del menú de navegación */
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                width: 100%;
+            }
+
+            nav a {
+                margin: 0;
+                padding: 6px 12px;
+                font-size: 0.95em;
+                background: rgba(255, 255, 255, 0.05); /* Crea un sutil recuadro para cada opción */
+                border-radius: 4px;
+            }
+
+            /* 3. Ajustes de legibilidad para la sección principal (Hero) */
+            .hero {
+                padding: 60px 15px;
+            }
+
+            .hero h2 {
+                font-size: 2.2em;
+            }
+
+            .hero h3 {
+                font-size: 1.2em;
+            }
+
+            .hero p {
+                font-size: 1.05em;
+            }
+
+            /* 4. Corrige el comportamiento del fondo en pantallas chicas */
+            body {
+                background-position: center bottom;
+                background-size: 100%;
+            }
+
+            /* 5. Ajusta la grilla de especialidades a una sola columna */
+            .tarjeta {
+                width: 100%;
+            }
+        }
+
+
+
     </style>
 </head>
 <body>
